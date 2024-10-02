@@ -1,37 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fordonsregister
 {
     class Fordon
     {
-        //Medlemsvariabler
-        public enum Typ { Bil, MC, Lastbil, Släp, Mopedbil }
-        private string regNr;
-        private string märke;
-        private string modell;
+        // Medlemsvariabler
+        public enum Typ { Bil, MC, Lastbil, Släp, Mopedbil };
         private Typ fordonstyp;
+        private string registreringsNummer;
+        private string tillverkare;
+        private string modell;
 
-
-        //Konstruktor (ett slag av klassmetod, enbart gjord för klasser)
-        public Fordon(string regnr, string märke, string modell, Typ fordonstyp) // en konstruktor som tar argument
+        // Konstruktor (en metod med samma namn som klassen, som returnerar ett objekt)
+        public Fordon(Typ fordonstyp) // en konstruktor kan, men måste inte, ta parametrar
         {
-            this.regNr = regnr;
-            this.märke = märke;
-            this.modell = modell;
             this.fordonstyp = fordonstyp;
         }
 
-        //Get/Set (hämta/sätta medemsvariablerna,  ett annat slag av klassmetod enbart gjord för klasser))
-        public string RegNr
+        // Get-Set för att hålla variablerna privata, och för att validera inkommande värden från UI (user interface, användargränssnittet)
+        public string RegistreringsNummer
         {
-            get { return regNr; }
-
-            // set { this.regNr = value; } //Används istället GodkännRegNr() kan det räcka med ett enbart returnerande värde.
-            // Testa, men glöm inte kommentera bort den andra set
+            get { return registreringsNummer; }
 
             set
             {
@@ -62,46 +51,40 @@ namespace Fordonsregister
                     throw new ArgumentException("Ett registreringsnummer måste bestå av exakt 6 tecken, med tre bokstäver följt av två siffror och en siffra eller bokstav.");
                 }
 
-                regNr = value.ToUpper();
+                registreringsNummer = value.ToUpper();
             }
         }
 
-        public string Märke
-        {
-            get { return märke; }
-            set { this.märke = value; }
-        }
-
-        public string Modell
-        {
-            get { return modell; }
-            set { this.modell = value; }
-        }
-
+        // Fordonstyp tas in från dropdown-menyn, och behöver därför inte valideras
         public Typ Fordonstyp
         {
             get { return fordonstyp; }
             set { this.fordonstyp = value; }
         }
 
-        //Klassens övriga metoder, här bestående av en annan lösning för att testa RegNr, och en override av ToString()
-        public static string GodkännRegNr(string regNr)
+        //TODO Tillverkare ska valideras, sparas i objektet och visas i UI
+        public string Tillverkare
         {
-            if (regNr.Length == 6)
-            {
-                for (int i = 0; i < 3; i++)
-                    if (!char.IsLetter(regNr[i]))
-                        return null;
-                for (int i = 3; i < 6; i++)
-                    if (!char.IsDigit(regNr[i]))
-                        return null;
-                return regNr.ToUpper();
-            }
-            return null;
+            get { return tillverkare; }
+            set { this.tillverkare = value; }
         }
+
+        //TODO Modell ska valideras, sparas i objektet och visas i UI
+        public string Modell
+        {
+            get { return modell; }
+            set { this.modell = value; }
+        }
+
+        //TODO Att spara årsmodell ska möjliggöras, ska valideras, sparas i objektet och visas i UI
+
+
+        // Klassens  eventuella övriga metoder brukar finnas här, här en override av ToString()
+
+        //TODO Modifiera overriden på ToString() så att allt visas som önskat i UIs listBox
         public override string ToString()
         {
-            return this.regNr + ": " + this.Märke + "\t" + this.Modell + "\t" + this.Fordonstyp;
+            return this.RegistreringsNummer + "\t" + this.Fordonstyp + "\t" + this.Tillverkare + "\t" + this.Modell;
         }
     }
 }

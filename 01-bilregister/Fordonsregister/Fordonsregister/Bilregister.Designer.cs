@@ -1,6 +1,6 @@
 ﻿namespace Fordonsregister
 {
-    partial class Form_Main
+    partial class Bilregister
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bilregister));
             this.lbl_Register = new System.Windows.Forms.Label();
             this.lbl_RegNr = new System.Windows.Forms.Label();
-            this.lbl_Marke = new System.Windows.Forms.Label();
+            this.lbl_Tillverkare = new System.Windows.Forms.Label();
             this.lbl_Modell = new System.Windows.Forms.Label();
             this.lbl_Typ = new System.Windows.Forms.Label();
             this.txtBoxIn_RegNr = new System.Windows.Forms.TextBox();
@@ -49,8 +49,8 @@
             this.radioBtn_Alla = new System.Windows.Forms.RadioButton();
             this.listBox_Register = new System.Windows.Forms.ListBox();
             this.lbl_Kategori = new System.Windows.Forms.Label();
-            this.btn_Sok = new System.Windows.Forms.Button();
             this.btn_SparaAndringar = new System.Windows.Forms.Button();
+            this.btn_Sok = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_Car)).BeginInit();
             this.grpBox_Visa.SuspendLayout();
             this.SuspendLayout();
@@ -79,17 +79,17 @@
             this.lbl_RegNr.TabIndex = 1;
             this.lbl_RegNr.Text = "Reg-nr";
             // 
-            // lbl_Marke
+            // lbl_Tillverkare
             // 
-            this.lbl_Marke.AutoSize = true;
-            this.lbl_Marke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Marke.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbl_Marke.Location = new System.Drawing.Point(33, 176);
-            this.lbl_Marke.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Marke.Name = "lbl_Marke";
-            this.lbl_Marke.Size = new System.Drawing.Size(53, 20);
-            this.lbl_Marke.TabIndex = 2;
-            this.lbl_Marke.Text = "Märke";
+            this.lbl_Tillverkare.AutoSize = true;
+            this.lbl_Tillverkare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Tillverkare.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_Tillverkare.Location = new System.Drawing.Point(33, 176);
+            this.lbl_Tillverkare.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Tillverkare.Name = "lbl_Tillverkare";
+            this.lbl_Tillverkare.Size = new System.Drawing.Size(79, 20);
+            this.lbl_Tillverkare.TabIndex = 2;
+            this.lbl_Tillverkare.Text = "Tillverkare";
             // 
             // lbl_Modell
             // 
@@ -160,7 +160,7 @@
             this.btn_Registrera.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_Registrera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Registrera.ForeColor = System.Drawing.Color.White;
-            this.btn_Registrera.Location = new System.Drawing.Point(140, 310);
+            this.btn_Registrera.Location = new System.Drawing.Point(139, 304);
             this.btn_Registrera.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Registrera.Name = "btn_Registrera";
             this.btn_Registrera.Size = new System.Drawing.Size(98, 30);
@@ -189,11 +189,11 @@
             this.grpBox_Visa.Controls.Add(this.radioBtn_MC);
             this.grpBox_Visa.Controls.Add(this.radioBtn_Bilar);
             this.grpBox_Visa.Controls.Add(this.radioBtn_Alla);
-            this.grpBox_Visa.Location = new System.Drawing.Point(473, 39);
+            this.grpBox_Visa.Location = new System.Drawing.Point(671, 39);
             this.grpBox_Visa.Margin = new System.Windows.Forms.Padding(2);
             this.grpBox_Visa.Name = "grpBox_Visa";
             this.grpBox_Visa.Padding = new System.Windows.Forms.Padding(2);
-            this.grpBox_Visa.Size = new System.Drawing.Size(87, 301);
+            this.grpBox_Visa.Size = new System.Drawing.Size(87, 295);
             this.grpBox_Visa.TabIndex = 12;
             this.grpBox_Visa.TabStop = false;
             this.grpBox_Visa.Text = "Visa";
@@ -281,10 +281,10 @@
             // listBox_Register
             // 
             this.listBox_Register.FormattingEnabled = true;
-            this.listBox_Register.Location = new System.Drawing.Point(259, 38);
+            this.listBox_Register.Location = new System.Drawing.Point(259, 44);
             this.listBox_Register.Margin = new System.Windows.Forms.Padding(2);
             this.listBox_Register.Name = "listBox_Register";
-            this.listBox_Register.Size = new System.Drawing.Size(192, 303);
+            this.listBox_Register.Size = new System.Drawing.Size(390, 290);
             this.listBox_Register.TabIndex = 13;
             // 
             // lbl_Kategori
@@ -292,32 +292,19 @@
             this.lbl_Kategori.AutoSize = true;
             this.lbl_Kategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Kategori.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbl_Kategori.Location = new System.Drawing.Point(470, 15);
+            this.lbl_Kategori.Location = new System.Drawing.Point(668, 15);
             this.lbl_Kategori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Kategori.Name = "lbl_Kategori";
             this.lbl_Kategori.Size = new System.Drawing.Size(76, 20);
             this.lbl_Kategori.TabIndex = 14;
             this.lbl_Kategori.Text = "Kategori: ";
             // 
-            // btn_Sok
-            // 
-            this.btn_Sok.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_Sok.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Sok.ForeColor = System.Drawing.Color.White;
-            this.btn_Sok.Location = new System.Drawing.Point(37, 273);
-            this.btn_Sok.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Sok.Name = "btn_Sok";
-            this.btn_Sok.Size = new System.Drawing.Size(98, 30);
-            this.btn_Sok.TabIndex = 15;
-            this.btn_Sok.Text = "Sök";
-            this.btn_Sok.UseVisualStyleBackColor = false;
-            // 
             // btn_SparaAndringar
             // 
             this.btn_SparaAndringar.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_SparaAndringar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_SparaAndringar.ForeColor = System.Drawing.Color.White;
-            this.btn_SparaAndringar.Location = new System.Drawing.Point(37, 310);
+            this.btn_SparaAndringar.Location = new System.Drawing.Point(37, 304);
             this.btn_SparaAndringar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SparaAndringar.Name = "btn_SparaAndringar";
             this.btn_SparaAndringar.Size = new System.Drawing.Size(98, 30);
@@ -325,12 +312,25 @@
             this.btn_SparaAndringar.Text = "Spara ändringar";
             this.btn_SparaAndringar.UseVisualStyleBackColor = false;
             // 
-            // Form_Main
+            // btn_Sok
+            // 
+            this.btn_Sok.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Sok.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Sok.ForeColor = System.Drawing.Color.White;
+            this.btn_Sok.Location = new System.Drawing.Point(37, 270);
+            this.btn_Sok.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Sok.Name = "btn_Sok";
+            this.btn_Sok.Size = new System.Drawing.Size(98, 30);
+            this.btn_Sok.TabIndex = 15;
+            this.btn_Sok.Text = "Sök";
+            this.btn_Sok.UseVisualStyleBackColor = false;
+            // 
+            // Bilregister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(601, 366);
+            this.ClientSize = new System.Drawing.Size(780, 366);
             this.Controls.Add(this.btn_SparaAndringar);
             this.Controls.Add(this.btn_Sok);
             this.Controls.Add(this.lbl_Kategori);
@@ -344,11 +344,11 @@
             this.Controls.Add(this.txtBoxIn_RegNr);
             this.Controls.Add(this.lbl_Typ);
             this.Controls.Add(this.lbl_Modell);
-            this.Controls.Add(this.lbl_Marke);
+            this.Controls.Add(this.lbl_Tillverkare);
             this.Controls.Add(this.lbl_RegNr);
             this.Controls.Add(this.lbl_Register);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form_Main";
+            this.Name = "Bilregister";
             this.Text = "Bilregistret";
             ((System.ComponentModel.ISupportInitialize)(this.img_Car)).EndInit();
             this.grpBox_Visa.ResumeLayout(false);
@@ -362,7 +362,7 @@
 
         private System.Windows.Forms.Label lbl_Register;
         private System.Windows.Forms.Label lbl_RegNr;
-        private System.Windows.Forms.Label lbl_Marke;
+        private System.Windows.Forms.Label lbl_Tillverkare;
         private System.Windows.Forms.Label lbl_Modell;
         private System.Windows.Forms.Label lbl_Typ;
         private System.Windows.Forms.TextBox txtBoxIn_RegNr;
@@ -380,8 +380,8 @@
         private System.Windows.Forms.RadioButton radioBtn_Lastbil;
         private System.Windows.Forms.RadioButton radioBtn_Mopedbil;
         private System.Windows.Forms.Label lbl_Kategori;
-        private System.Windows.Forms.Button btn_Sok;
         private System.Windows.Forms.Button btn_SparaAndringar;
+        private System.Windows.Forms.Button btn_Sok;
     }
 }
 

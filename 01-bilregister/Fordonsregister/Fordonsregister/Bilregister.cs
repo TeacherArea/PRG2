@@ -1,38 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fordonsregister
 {
-    public partial class Form_Main : Form
+    public partial class Bilregister : Form
     {
-        List<Fordon> fordonLista = new List<Fordon>();
+        List<Fordon> fordonsLista = new List<Fordon>(); // skapa en lista
 
-        public Form_Main()
+        public Bilregister()
         {
             InitializeComponent();
             dropDownList_Typ.SelectedItem = dropDownList_Typ.Items[0];
-            btn_Sok.Visible = false;
-            btn_SparaAndringar.Visible = false;
+            btn_Sok.Visible = false; // möjlig utökning av appen
+            btn_SparaAndringar.Visible = false; // möjlig utökning av appen
         }
         private void Btn_Registrera_Click(object sender, EventArgs e)
         {
             try
-            {   
-                Fordon nyttFordon = new Fordon("", txtBoxIn_Märke.Text, txtBoxIn_Modell.Text,
-                (Fordon.Typ)dropDownList_Typ.SelectedIndex);
+            {
+                Fordon fordon = new Fordon((Fordon.Typ)dropDownList_Typ.SelectedIndex); // här skpas objektet
 
                 string regNr = txtBoxIn_RegNr.Text;
-                nyttFordon.RegNr = regNr;
+                fordon.RegistreringsNummer = regNr; // här anropas egenskapen RegNr, och i dess set-metod valideras 
 
-                fordonLista.Add(nyttFordon);
-                listBox_Register.Items.Add(nyttFordon);
+                fordonsLista.Add(fordon); // lägg till objektet till listan
+                listBox_Register.Items.Add(fordon); // visa objektet i användargränssnittet
+
                 txtBoxIn_RegNr.Clear();
                 txtBoxIn_Märke.Clear();
                 txtBoxIn_Modell.Clear();
@@ -42,49 +36,12 @@ namespace Fordonsregister
             {
                 MessageBox.Show(ex.Message, Text);
             }
-
-
-
-            /* Om man använder en metod istället för egenskaper, kan denna kod fungera istället
-             * lägg märket till att denna kod använder den andra konstruktorn
-             */
-
-            //try
-            //{
-            //    string regNr = Fordon.GodkännRegNr(txtBoxIn_RegNr.Text);
-
-            //    if (regNr == null)
-            //    {
-            //        MessageBox.Show("Vänligen använd formatet ABC123", Text);
-            //        return;
-            //    }
-
-            //    foreach (Fordon f in fordonLista)
-            //    {
-            //        if (regNr == f.RegNr)
-            //        {
-            //            MessageBox.Show("Registreringsnumret finns redan inlagt i registret", Text);
-            //        }
-            //    }
-            //    Fordon nyttFordon = new Fordon(regNr, txtBoxIn_Märke.Text, txtBoxIn_Modell.Text,
-            //        (Fordon.Typ)dropDownList_Typ.SelectedIndex);
-
-            //    fordonLista.Add(nyttFordon);
-            //    listBox_Register.Items.Add(nyttFordon);
-            //    txtBoxIn_RegNr.Clear();
-            //    txtBoxIn_Märke.Clear();
-            //    txtBoxIn_Modell.Clear();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Något gick fel", Text);
-            //}
         }
 
         private void radioBtn_CheckedChanged(object sender, EventArgs e)
         {
             listBox_Register.Items.Clear();
-            foreach (Fordon f in fordonLista)
+            foreach (Fordon f in fordonsLista)
             {
                 if (f.Fordonstyp != Fordon.Typ.Bil && radioBtn_Bilar.Checked) continue;
                 if (f.Fordonstyp != Fordon.Typ.MC && radioBtn_MC.Checked) continue;
