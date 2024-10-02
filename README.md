@@ -30,7 +30,7 @@ Kriterierna nedan är inte uppfyllda.
 ## Instruktioner för installation och körning
 1. Klona detta GitHub-repo:
     ```bash
-    git clone <url till repo>
+    git clone <[repo](https://github.com/TeacherArea/PRG2_CarRegistry_repetition_OOP.git)>
     ```
 2. Öppna projektet i Visual Studio.
 3. Bygg och kör projektet.
