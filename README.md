@@ -3,7 +3,7 @@
 ## Beskrivning
 Detta projekt är ett bilregister utvecklat som en Windows Forms-applikation i C#. Programmet möjliggör att användare kan registrera fordon med olika attribut (som registreringsnummer, märke, modell och årsmodell) och validera inmatningar för att säkerställa att endast giltig information sparas. Projektet är utvecklat för .NET 8 eller senare.
 
-![Fordon](Resources/Vehicles.jpg)
+![Fordon](01-bilregister/Fordonsregister/Resources/Vehicles.jpg)
 
 ## Uppgiftsbeskrivning
 Eleverna ska färdigställa koden som tillhandahålls på GitHub genom att implementera validering av användarens inmatning i applikationens gränssnitt. Specifika valideringar som krävs beskrivs nedan.
