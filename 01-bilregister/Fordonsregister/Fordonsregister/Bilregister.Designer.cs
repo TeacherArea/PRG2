@@ -51,6 +51,7 @@
             this.lbl_Kategori = new System.Windows.Forms.Label();
             this.btn_SparaAndringar = new System.Windows.Forms.Button();
             this.btn_Sok = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_Car)).BeginInit();
             this.grpBox_Visa.SuspendLayout();
             this.SuspendLayout();
@@ -58,85 +59,90 @@
             // lbl_Register
             // 
             this.lbl_Register.AutoSize = true;
+            this.lbl_Register.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lbl_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Register.ForeColor = System.Drawing.Color.SteelBlue;
             this.lbl_Register.Location = new System.Drawing.Point(255, 15);
             this.lbl_Register.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Register.Name = "lbl_Register";
-            this.lbl_Register.Size = new System.Drawing.Size(77, 20);
+            this.lbl_Register.Size = new System.Drawing.Size(151, 20);
             this.lbl_Register.TabIndex = 0;
-            this.lbl_Register.Text = "Register: ";
+            this.lbl_Register.Text = "Registrerade fordon";
             // 
             // lbl_RegNr
             // 
             this.lbl_RegNr.AutoSize = true;
-            this.lbl_RegNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_RegNr.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lbl_RegNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_RegNr.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbl_RegNr.Location = new System.Drawing.Point(33, 145);
+            this.lbl_RegNr.Location = new System.Drawing.Point(23, 175);
             this.lbl_RegNr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_RegNr.Name = "lbl_RegNr";
-            this.lbl_RegNr.Size = new System.Drawing.Size(58, 20);
+            this.lbl_RegNr.Size = new System.Drawing.Size(108, 18);
             this.lbl_RegNr.TabIndex = 1;
-            this.lbl_RegNr.Text = "Reg-nr";
+            this.lbl_RegNr.Text = "Registreringsnr";
             // 
             // lbl_Tillverkare
             // 
             this.lbl_Tillverkare.AutoSize = true;
-            this.lbl_Tillverkare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Tillverkare.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lbl_Tillverkare.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_Tillverkare.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbl_Tillverkare.Location = new System.Drawing.Point(33, 176);
+            this.lbl_Tillverkare.Location = new System.Drawing.Point(23, 265);
             this.lbl_Tillverkare.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Tillverkare.Name = "lbl_Tillverkare";
-            this.lbl_Tillverkare.Size = new System.Drawing.Size(79, 20);
+            this.lbl_Tillverkare.Size = new System.Drawing.Size(75, 18);
             this.lbl_Tillverkare.TabIndex = 2;
             this.lbl_Tillverkare.Text = "Tillverkare";
             // 
             // lbl_Modell
             // 
             this.lbl_Modell.AutoSize = true;
-            this.lbl_Modell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Modell.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lbl_Modell.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_Modell.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbl_Modell.Location = new System.Drawing.Point(33, 208);
+            this.lbl_Modell.Location = new System.Drawing.Point(23, 235);
             this.lbl_Modell.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Modell.Name = "lbl_Modell";
-            this.lbl_Modell.Size = new System.Drawing.Size(55, 20);
+            this.lbl_Modell.Size = new System.Drawing.Size(52, 18);
             this.lbl_Modell.TabIndex = 3;
             this.lbl_Modell.Text = "Modell";
             // 
             // lbl_Typ
             // 
             this.lbl_Typ.AutoSize = true;
-            this.lbl_Typ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Typ.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lbl_Typ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_Typ.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbl_Typ.Location = new System.Drawing.Point(33, 240);
+            this.lbl_Typ.Location = new System.Drawing.Point(23, 205);
             this.lbl_Typ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Typ.Name = "lbl_Typ";
-            this.lbl_Typ.Size = new System.Drawing.Size(34, 20);
+            this.lbl_Typ.Size = new System.Drawing.Size(32, 18);
             this.lbl_Typ.TabIndex = 4;
             this.lbl_Typ.Text = "Typ";
             // 
             // txtBoxIn_RegNr
             // 
-            this.txtBoxIn_RegNr.Location = new System.Drawing.Point(120, 146);
+            this.txtBoxIn_RegNr.Location = new System.Drawing.Point(133, 176);
             this.txtBoxIn_RegNr.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxIn_RegNr.Name = "txtBoxIn_RegNr";
-            this.txtBoxIn_RegNr.Size = new System.Drawing.Size(119, 20);
+            this.txtBoxIn_RegNr.Size = new System.Drawing.Size(106, 20);
             this.txtBoxIn_RegNr.TabIndex = 5;
             // 
             // txtBoxIn_Märke
             // 
-            this.txtBoxIn_Märke.Location = new System.Drawing.Point(120, 177);
+            this.txtBoxIn_Märke.Location = new System.Drawing.Point(133, 267);
             this.txtBoxIn_Märke.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxIn_Märke.Name = "txtBoxIn_Märke";
-            this.txtBoxIn_Märke.Size = new System.Drawing.Size(119, 20);
+            this.txtBoxIn_Märke.Size = new System.Drawing.Size(106, 20);
             this.txtBoxIn_Märke.TabIndex = 6;
             // 
             // txtBoxIn_Modell
             // 
-            this.txtBoxIn_Modell.Location = new System.Drawing.Point(120, 208);
+            this.txtBoxIn_Modell.Location = new System.Drawing.Point(133, 237);
             this.txtBoxIn_Modell.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxIn_Modell.Name = "txtBoxIn_Modell";
-            this.txtBoxIn_Modell.Size = new System.Drawing.Size(119, 20);
+            this.txtBoxIn_Modell.Size = new System.Drawing.Size(106, 20);
             this.txtBoxIn_Modell.TabIndex = 7;
             // 
             // dropDownList_Typ
@@ -149,10 +155,10 @@
             "Lastbil",
             "Släp",
             "Mopedbil"});
-            this.dropDownList_Typ.Location = new System.Drawing.Point(120, 239);
+            this.dropDownList_Typ.Location = new System.Drawing.Point(133, 206);
             this.dropDownList_Typ.Margin = new System.Windows.Forms.Padding(2);
             this.dropDownList_Typ.Name = "dropDownList_Typ";
-            this.dropDownList_Typ.Size = new System.Drawing.Size(119, 21);
+            this.dropDownList_Typ.Size = new System.Drawing.Size(106, 21);
             this.dropDownList_Typ.TabIndex = 9;
             // 
             // btn_Registrera
@@ -160,7 +166,7 @@
             this.btn_Registrera.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_Registrera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Registrera.ForeColor = System.Drawing.Color.White;
-            this.btn_Registrera.Location = new System.Drawing.Point(139, 304);
+            this.btn_Registrera.Location = new System.Drawing.Point(24, 341);
             this.btn_Registrera.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Registrera.Name = "btn_Registrera";
             this.btn_Registrera.Size = new System.Drawing.Size(98, 30);
@@ -174,10 +180,10 @@
             this.img_Car.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("img_Car.BackgroundImage")));
             this.img_Car.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.img_Car.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.img_Car.Location = new System.Drawing.Point(37, 15);
+            this.img_Car.Location = new System.Drawing.Point(24, 45);
             this.img_Car.Margin = new System.Windows.Forms.Padding(2);
             this.img_Car.Name = "img_Car";
-            this.img_Car.Size = new System.Drawing.Size(202, 106);
+            this.img_Car.Size = new System.Drawing.Size(215, 106);
             this.img_Car.TabIndex = 11;
             this.img_Car.TabStop = false;
             // 
@@ -290,6 +296,7 @@
             // lbl_Kategori
             // 
             this.lbl_Kategori.AutoSize = true;
+            this.lbl_Kategori.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lbl_Kategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Kategori.ForeColor = System.Drawing.Color.SteelBlue;
             this.lbl_Kategori.Location = new System.Drawing.Point(668, 15);
@@ -304,7 +311,7 @@
             this.btn_SparaAndringar.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_SparaAndringar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_SparaAndringar.ForeColor = System.Drawing.Color.White;
-            this.btn_SparaAndringar.Location = new System.Drawing.Point(37, 304);
+            this.btn_SparaAndringar.Location = new System.Drawing.Point(133, 341);
             this.btn_SparaAndringar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SparaAndringar.Name = "btn_SparaAndringar";
             this.btn_SparaAndringar.Size = new System.Drawing.Size(98, 30);
@@ -317,7 +324,7 @@
             this.btn_Sok.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_Sok.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Sok.ForeColor = System.Drawing.Color.White;
-            this.btn_Sok.Location = new System.Drawing.Point(37, 270);
+            this.btn_Sok.Location = new System.Drawing.Point(242, 341);
             this.btn_Sok.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Sok.Name = "btn_Sok";
             this.btn_Sok.Size = new System.Drawing.Size(98, 30);
@@ -325,12 +332,26 @@
             this.btn_Sok.Text = "Sök";
             this.btn_Sok.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label1.Location = new System.Drawing.Point(22, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 20);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Registrera fordon";
+            // 
             // Bilregister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(780, 366);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(780, 382);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_SparaAndringar);
             this.Controls.Add(this.btn_Sok);
             this.Controls.Add(this.lbl_Kategori);
@@ -347,9 +368,10 @@
             this.Controls.Add(this.lbl_Tillverkare);
             this.Controls.Add(this.lbl_RegNr);
             this.Controls.Add(this.lbl_Register);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Bilregister";
-            this.Text = "Bilregistret";
+            this.Text = "Fordonsegistret";
             ((System.ComponentModel.ISupportInitialize)(this.img_Car)).EndInit();
             this.grpBox_Visa.ResumeLayout(false);
             this.grpBox_Visa.PerformLayout();
@@ -382,6 +404,7 @@
         private System.Windows.Forms.Label lbl_Kategori;
         private System.Windows.Forms.Button btn_SparaAndringar;
         private System.Windows.Forms.Button btn_Sok;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -12,8 +12,8 @@ namespace Fordonsregister
         {
             InitializeComponent();
             dropDownList_Typ.SelectedItem = dropDownList_Typ.Items[0];
-            btn_Sok.Visible = false; // möjlig utökning av appen
-            btn_SparaAndringar.Visible = false; // möjlig utökning av appen
+            btn_Sok.Enabled = false; // möjlig utökning av appen
+            btn_SparaAndringar.Enabled = false; // möjlig utökning av appen
         }
         private void Btn_Registrera_Click(object sender, EventArgs e)
         {
