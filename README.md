@@ -1,7 +1,9 @@
 # Bilregister - Windows Forms-applikation
 
 ## Beskrivning
-Detta projekt är en övningsuppgift för validering med set-metoder, användande av ArgumentException och en introduktion till override. Uppgiften handlar om ett bilregister, utvecklat som en Windows Forms-applikation i C#. Programmet är tänkt att möjliggöra för användare att registrera fordon med olika attribut (som registreringsnummer, märke, modell och årsmodell) och validera inmatningar för att säkerställa att endast giltig information sparas. Projektet är utvecklat för .NET 8 eller senare.
+Detta projekt är en övningsuppgift för validering med set-metoder, användande av ArgumentException och en introduktion till override. Det är samtidigt en repetition av olika tekniker från Programmering 1.
+
+Uppgiften handlar om ett bilregister, utvecklat som en Windows Forms-applikation i C#. Programmet är tänkt att möjliggöra för användare att registrera fordon med olika attribut (som registreringsnummer, märke, modell och årsmodell) och validera inmatningar för att säkerställa att endast giltig information sparas. Projektet är utvecklat för .NET 8 eller senare.
 
 ![Fordon](01-bilregister/Fordonsregister/Fordonsregister/Resources/Vehicles.jpg)
 
